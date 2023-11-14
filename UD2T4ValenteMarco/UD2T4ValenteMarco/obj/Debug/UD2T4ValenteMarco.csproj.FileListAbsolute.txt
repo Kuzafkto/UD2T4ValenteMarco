@@ -1,0 +1,8 @@
+C:\Users\Kuza\source\repos\UD2T4ValenteMarco\UD2T4ValenteMarco\bin\Debug\UD2T4ValenteMarco.exe.config
+C:\Users\Kuza\source\repos\UD2T4ValenteMarco\UD2T4ValenteMarco\bin\Debug\UD2T4ValenteMarco.exe
+C:\Users\Kuza\source\repos\UD2T4ValenteMarco\UD2T4ValenteMarco\bin\Debug\UD2T4ValenteMarco.pdb
+C:\Users\Kuza\source\repos\UD2T4ValenteMarco\UD2T4ValenteMarco\obj\Debug\UD2T4ValenteMarco.csproj.AssemblyReference.cache
+C:\Users\Kuza\source\repos\UD2T4ValenteMarco\UD2T4ValenteMarco\obj\Debug\UD2T4ValenteMarco.csproj.SuggestedBindingRedirects.cache
+C:\Users\Kuza\source\repos\UD2T4ValenteMarco\UD2T4ValenteMarco\obj\Debug\UD2T4ValenteMarco.csproj.CoreCompileInputs.cache
+C:\Users\Kuza\source\repos\UD2T4ValenteMarco\UD2T4ValenteMarco\obj\Debug\UD2T4ValenteMarco.exe
+C:\Users\Kuza\source\repos\UD2T4ValenteMarco\UD2T4ValenteMarco\obj\Debug\UD2T4ValenteMarco.pdb

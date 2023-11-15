@@ -39,24 +39,10 @@ namespace UD2T4ValenteMarco
                 switch (option)
                 {
                     case 1:
+
                         try
                         {
-                            do
-                            {
-                                Console.Write("Ingrese el primer lado del rectángulo: ");
-                                ladoP = float.Parse(Console.ReadLine());
-                            } while (ladoP <= 0f);
-
-                            do
-                            {
-                                Console.Write("Ingrese el segundo lado del rectángulo: ");
-                                ladoS = float.Parse(Console.ReadLine());
-                            } while (ladoS <= 0f);
-
-                            Rectangulo rectangulo = new Rectangulo(ladoP, ladoS);
-                            Console.WriteLine("Perímetro (circunferencia) del rectangulo: " + rectangulo.Perimetro());
-                            Console.WriteLine("Área del rectangulo: " + rectangulo.Area());
-                            Console.WriteLine("Introduzca INTRO para continuar");
+                            Rectangulo();
                             key = Console.ReadKey();
                             while (key.Key != ConsoleKey.Enter)
                             {
@@ -74,18 +60,7 @@ namespace UD2T4ValenteMarco
                     case 2:
                         try
                         {
-                            float radio = 0;
-                            do
-                            {
-                                Console.Write("Introduce el radio del círculo: ");
-                                radio = float.Parse(Console.ReadLine());
-                            } while (radio < 0);
-
-                            Circulo circulo = new Circulo(radio);
-
-                            Console.WriteLine("Perimetro del circulo: " + circulo.Perimetro());
-                            Console.WriteLine("Área del círculo: " + circulo.Area());
-                            Console.WriteLine("Introduzca INTRO para continuar");
+                            Circulo();
                             key = Console.ReadKey();
                             while (key.Key != ConsoleKey.Enter)
                             {
@@ -108,22 +83,7 @@ namespace UD2T4ValenteMarco
                     case 3:
                         try
                         {
-                            do
-                            {
-                                Console.Write("Ingrese la base del triángulo: ");
-                                ladoP = float.Parse(Console.ReadLine());
-                            } while (ladoP <= 0);
-
-                            do
-                            {
-                                Console.Write("Ingrese la altura del triángulo: ");
-                                ladoS = float.Parse(Console.ReadLine());
-                            } while (ladoS <= 0);
-
-                            Triangulo triangulo = new Triangulo(ladoP, ladoS);
-                            Console.WriteLine("Perímetro (circunferencia) del triangulo: " + triangulo.Perimetro());
-                            Console.WriteLine("Área del triangulo: " + triangulo.Area());
-                            Console.WriteLine("Introduzca INTRO para continuar");
+                            Triangulo();
                             key = Console.ReadKey();
                             while (key.Key != ConsoleKey.Enter)
                             {
@@ -137,7 +97,7 @@ namespace UD2T4ValenteMarco
                             Console.Clear();
                             skip = false;
                         }
-                        catch (FormatException)
+                        catch(FormatException)
                         {
                             skip = true;
                         }
@@ -146,5 +106,64 @@ namespace UD2T4ValenteMarco
 
             } while (option != 0);  // Continúa ejecutándose hasta que el usuario elija salir (opción 0)
         }
+        public static void Triangulo()
+        {
+            float lado1, lado2;
+                do
+                {
+                    Console.Write("Ingrese la base del triángulo: ");
+                    lado1 = float.Parse(Console.ReadLine());
+                } while (lado1 <= 0);
+
+                do
+                {
+                    Console.Write("Ingrese la altura del triángulo: ");
+                    lado2 = float.Parse(Console.ReadLine());
+                } while (lado2 <= 0);
+
+                Triangulo triangulo = new Triangulo(lado1, lado2);
+                Console.WriteLine("Perímetro (circunferencia) del triangulo: " + triangulo.Perimetro());
+                Console.WriteLine("Área del triangulo: " + triangulo.Area());
+                Console.WriteLine("Introduzca INTRO para continuar");   
+        }
+
+        public static void Circulo()
+        {
+            float radio = 0;
+            do
+            {
+                Console.Write("Introduce el radio del círculo: ");
+                radio = float.Parse(Console.ReadLine());
+            } while (radio < 0);
+
+            Circulo circulo = new Circulo(radio);
+
+            Console.WriteLine("Perimetro del circulo: " + circulo.Perimetro());
+            Console.WriteLine("Área del círculo: " + circulo.Area());
+            Console.WriteLine("Introduzca INTRO para continuar");
+        }
+
+        public static void Rectangulo()
+        {
+            float lado1,lado2;
+            do
+            {
+                Console.Write("Ingrese el primer lado del rectángulo: ");
+                lado1 = float.Parse(Console.ReadLine());
+            } while (lado1 <= 0f);
+
+            do
+            {
+                Console.Write("Ingrese el segundo lado del rectángulo: ");
+                lado2 = float.Parse(Console.ReadLine());
+            } while (lado2 <= 0f);
+
+            Rectangulo rectangulo = new Rectangulo(lado1, lado2);
+            Console.WriteLine("Perímetro (circunferencia) del rectangulo: " + rectangulo.Perimetro());
+            Console.WriteLine("Área del rectangulo: " + rectangulo.Area());
+            Console.WriteLine("Introduzca INTRO para continuar");
+        }
     }
+
 }
+
